@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: teleport-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: teleport
+  template:
+    metadata:
+      labels:
+        app: teleport
+    spec:
+      containers:
+      - name: teleport
+        image: teleport-app:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: "prod"
