@@ -1,9 +1,9 @@
 package com.teleport.repository;
 
-import com.teleport.entity.User;
+import com.teleport.entity.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface TicketRepository extends JpaRepository<Ticket, Long> {
 }
